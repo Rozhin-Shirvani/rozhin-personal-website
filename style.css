@@ -1,0 +1,688 @@
+
+/* =========================
+   1. General Settings
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark-green: #34483B;
+    --olive: #78866B;
+    --light-green: #B8C4AC;
+    --cream: #F5F2EA;
+    --white: #FFFFFF;
+    --text: #62675F;
+    --soft-bg: #EAEDE5;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--cream);
+    color: var(--dark-green);
+    line-height: 1.8;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================
+   2. Navigation
+========================= */
+
+header {
+    width: 100%;
+    background-color: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(52, 72, 59, 0.04);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--dark-green);
+    text-decoration: none;
+    direction: ltr;
+}
+
+.logo span {
+    color: var(--olive);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--olive);
+}
+
+.nav-button {
+    background: var(--dark-green);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: var(--olive);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    color: var(--dark-green);
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   3. Hero Section
+========================= */
+
+.hero {
+    max-width: 1200px;
+    min-height: 570px;
+    margin: auto;
+    padding: 70px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.welcome {
+    display: inline-block;
+    background: #E5E9DF;
+    color: var(--olive);
+    padding: 7px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.hero h1 span {
+    color: var(--olive);
+}
+
+.hero h2 {
+    font-size: 21px;
+    margin: 8px 0 18px;
+    font-weight: 600;
+}
+
+.hero p {
+    max-width: 510px;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 2.2;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: var(--dark-green);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: var(--olive);
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid var(--olive);
+    color: var(--dark-green);
+}
+
+.secondary-btn:hover {
+    background: #E5E9DF;
+}
+
+
+/* =========================
+   4. Profile Image
+========================= */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-frame {
+    width: 340px;
+    height: 390px;
+    background: var(--light-green);
+    border-radius: 160px 160px 25px 25px;
+    padding: 15px;
+}
+
+.profile-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #E8E1D2;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-placeholder span {
+    font-size: 130px;
+    font-weight: 800;
+    color: var(--olive);
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 30px;
+    right: 5px;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    font-size: 13px;
+}
+
+.floating-card span {
+    color: var(--olive);
+}
+
+
+/* =========================
+   5. General Sections
+========================= */
+
+.section {
+    padding: 85px 30px;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 35px;
+}
+
+.section-title span {
+    color: var(--olive);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.section-title > p {
+    color: var(--text);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   6. About Section
+========================= */
+
+.about-content {
+    max-width: 760px;
+    margin: auto;
+    color: var(--text);
+    line-height: 2.3;
+    font-size: 15px;
+}
+
+
+/* =========================
+   7. Education Section
+========================= */
+
+.education {
+    background: var(--soft-bg);
+}
+
+.info-card {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    font-size: 21px;
+}
+
+.info-card p {
+    color: var(--text);
+    margin: 8px 0;
+}
+
+.info-card span {
+    color: var(--olive);
+    font-size: 13px;
+}
+
+
+/* =========================
+   8. Interests Section
+========================= */
+
+.interests-grid {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.interest-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    transition: 0.3s;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(52, 72, 59, 0.08);
+}
+
+.interest-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background: #EAEDE5;
+    color: var(--dark-green);
+    border-radius: 14px;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.interest-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.interest-card p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+
+/* =========================
+   9. Projects Section
+========================= */
+
+.projects {
+    background: var(--soft-bg);
+}
+
+.projects-grid {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    text-align: right;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(52, 72, 59, 0.08);
+}
+
+.project-icon {
+    width: 55px;
+    height: 55px;
+    background: #EAEDE5;
+    color: var(--dark-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.project-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #8B7545;
+    background: #F6F0E1;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #B99A51;
+    border-radius: 50%;
+}
+
+.project-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    direction: ltr;
+    text-align: right;
+}
+
+.project-card p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 2.2;
+    min-height: 85px;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+    direction: ltr;
+}
+
+.project-technologies span {
+    background: #EAEDE5;
+    color: var(--dark-green);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+
+/* =========================
+   10. Contact Section
+========================= */
+
+.contact-description {
+    color: var(--text);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.contact-grid {
+    max-width: 750px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 22px;
+    border-radius: 13px;
+    text-decoration: none;
+    color: var(--dark-green);
+    text-align: right;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    transition: 0.3s;
+    min-width: 0;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    background: #EAEDE5;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+    height: 45px;
+    background: #EAEDE5;
+    border-radius: 12px;
+    font-size: 22px;
+    color: var(--dark-green);
+}
+
+.contact-card h3 {
+    font-size: 15px;
+    direction: ltr;
+    text-align: right;
+}
+
+.contact-card p {
+    color: var(--text);
+    font-size: 12px;
+    direction: ltr;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   11. Footer
+========================= */
+
+footer {
+    background: var(--dark-green);
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   12. Responsive Design
+========================= */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 18px 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .image-frame {
+        width: 290px;
+        height: 340px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 45px 22px;
+        gap: 35px;
+    }
+
+    .hero p {
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .image-frame {
+        width: 250px;
+        height: 290px;
+    }
+
+    .floating-card {
+        right: -5px;
+    }
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .projects-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card p {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        padding: 11px 17px;
+        font-size: 12px;
+    }
+
+}
